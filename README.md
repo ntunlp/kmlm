@@ -8,7 +8,7 @@ Instructions can be found in ```k-mlm/README.md```.
 Instructions can be found in ```wikidata_tool/README.md```.
 
 # Data and Pretrained Models
-We will release the data and checkpoints soon.
+Our data and checkpoints can be downloaded [here](https://drive.google.com/drive/folders/1_IDaoNeCyYpEL1PCZdsQU5f7eRrOW-CN?usp=sharing).
 
 # Citation
 Please cite our paper if you found the resources in this repository useful.
