@@ -9,6 +9,11 @@ Instructions can be found in ```wikidata_tool/README.md```.
 
 # Data and Pretrained Models
 Our data and checkpoints can be downloaded [here](https://drive.google.com/drive/folders/1_IDaoNeCyYpEL1PCZdsQU5f7eRrOW-CN?usp=sharing).
+- xlmr_base_kmlm.zip: The checkpoint of our base model (Mix).
+- xlmr_large_kmlm.zip: The checkpoint of our large model (Mix).
+- logic.zip: Dataset for the  cross-lingual logical reasoning (XLR) task.
+- kg.zip & kg_clean.mono.zip: Multilingual synthetic sentences for knowledge oriented pretraining.
+- kg.cycle.zip: Multilingual synthetic sentences for logical reasoning oriented pretraining. 
 
 # Citation
 Please cite our paper if you found the resources in this repository useful.
