@@ -1,24 +1,25 @@
-# tools for Wikidata preprocessing
+# Tools for Wikidata Preprocessing
 
 The tools can be used to first load data to mongodb, and then run queries to generate data in the desired format.
 
-## download data
+## Download data
 ```
 wget https://dumps.wikimedia.org/wikidatawiki/entities/20210301/wikidata-20210301-all.json.gz
 ```
 
-## create mongodb
+## Create mongodb
 ```
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel62-4.2.13.tgz
 mongo/bin/mongod -f mongo_config.ini
 mongo/bin/mongo 127.0.0.1:27017
 
-# build index for query speed up
+
+# Build index to speed up query processing
 > db.item.createIndex({'labels.en.value': 1})
 > db.item.createIndex({'id': 1})
 > db.property.createIndex({'id': 1})
 ```
-## load to db
+## Load to db
 ```
 python load_db.py
 ```
@@ -33,7 +34,7 @@ python load_db.py
 ['type', 'datatype', 'id', 'labels', 'descriptions', 'aliases', 'claims', 'lastrevid', 'en_label']
 ```
 
-## query example
+## Query example
 ```
 mongo 11.139.194.169:27017
 > use wikidata
@@ -44,11 +45,11 @@ mongo 11.139.194.169:27017
 > db.item.find({'labels.en.value': 'happiness'}, {'id': 1, 'labels.en.value': 1, 'claims.P31': 1}).pretty()
 ```
 
-## other
+## Free text data 
 pretraining data for xlmr http://data.statmt.org/cc-100/
 
 
-## Sample filtered relations and entities from kepler
+## Sample filtered relations and entities from [KEPLER](https://deepgraphlearning.github.io/project/wikidata5m).
 ```
 head PATH/TO/wiki5m/entities
 Q1
